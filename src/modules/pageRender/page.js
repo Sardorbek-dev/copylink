@@ -213,7 +213,7 @@ export default function(obj) {
                 })
             }, {
                 name: "donate",
-                title: `<i class="fa-solid fa-heart-circle-bolt mr-5"></i> ${t('DonationsTab')}`,
+                title: `${emoji("💖")} ${t('DonationsTab')}`,
                 content: popup({
                     name: "donate",
                     header: {
