@@ -255,8 +255,8 @@ export default function(obj) {
             closeAria: t('AccessibilityGoBack'),
             header: {
                 aboveTitle: {
-                    text: `v.${version}-${obj.hash}${platform} (${obj.branch})`,
-                    url: `${repo}/commit/${obj.hash}`
+                    text:'',
+                    url: ''
                 },
                 title: `${emoji("⚙️", 30)} ${t('TitlePopupSettings')}`
             },
