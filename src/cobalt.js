@@ -31,5 +31,5 @@ if (apiMode) {
     const { runWeb } = await import('./core/web.js');
     await runWeb(express, app, gitCommit, gitBranch, __dirname)
 } else {
-    console.log(Red(`cobalt wasn't configured yet or configuration is invalid.\n`) + Bright(`please run the setup script to fix this: `) + Green(`npm run setup`))
+    console.log(Red(`copylink wasn't configured yet or configuration is invalid.\n`) + Bright(`please run the setup script to fix this: `) + Green(`npm run setup`))
 }

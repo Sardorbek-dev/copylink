@@ -252,7 +252,7 @@ button:active,
     left: 50%;
     transform: translate(-50%, -50%);
 }
-#cobalt-main-box {
+#copylink-main-box {
     position: fixed;
     width: 60%;
     height: auto;
@@ -278,12 +278,12 @@ button:active,
     flex-direction: column;
     width: 100%;
 }
-#cobalt-main-box #top {
+#copylink-main-box #top {
     display: inline-flex;
     height: 2.5rem;
     flex-direction: row;
 }
-#cobalt-main-box #bottom {
+#copylink-main-box #bottom {
     padding-top: 1rem;
     display: flex;
     flex-direction: row;
@@ -341,7 +341,7 @@ button:active,
     font-size: 0.9rem;
     text-align: center;
 }
-#cobalt-main-box #bottom,
+#copylink-main-box #bottom,
 #footer-buttons,
 #footer-buttons, .footer-pair {
     gap: var(--gap);
@@ -372,7 +372,7 @@ button:active,
 .text-backdrop.link {
     text-decoration: underline;
 }
-.cobalt-support-link {
+.copylink-support-link {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -757,7 +757,7 @@ button:active,
     margin-top: 0!important;
     margin-bottom: var(--padding-1);
 }
-#cobalt-main-box #bottom button {
+#copylink-main-box #bottom button {
     width: auto;
     padding: var(--gap) 1.2rem;
 }
@@ -1012,7 +1012,7 @@ button:active,
     }
 }
 @media screen and (max-width: 1440px) {
-    #cobalt-main-box {
+    #copylink-main-box {
         width: 65%;
     }
     .popup.small {
@@ -1028,7 +1028,7 @@ button:active,
     }
 }
 @media screen and (max-width: 1200px) {
-    #cobalt-main-box {
+    #copylink-main-box {
         width: 70%;
     }
     .popup.small {
@@ -1039,7 +1039,7 @@ button:active,
     }
 }
 @media screen and (max-width: 1025px) {
-    #cobalt-main-box {
+    #copylink-main-box {
         width: 75%;
     }
     .popup.small {
@@ -1067,13 +1067,13 @@ button:active,
     }
 }
 @media screen and (max-width: 720px) {
-    #cobalt-main-box {
+    #copylink-main-box {
         width: calc(100% - (0.7rem * 2));
     }
-    #cobalt-main-box #bottom {
+    #copylink-main-box #bottom {
         flex-direction: column-reverse;
     }
-    #cobalt-main-box #bottom button {
+    #copylink-main-box #bottom button {
         width: 100%;
     }
     #footer {
@@ -1093,7 +1093,7 @@ button:active,
         height: auto;
         justify-content: center;
     }
-    #cobalt-main-box {
+    #copylink-main-box {
         display: flex;
         border: none;
         padding: 0;

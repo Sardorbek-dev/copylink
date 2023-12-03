@@ -297,8 +297,8 @@ function checkbox(action) {
     sSet(action, !!eid(action).checked);
     switch(action) {
         case "alwaysVisibleButton": button(); break;
-        case "reduceTransparency": eid("cobalt-body").classList.toggle('no-transparency'); break;
-        case "disableAnimations": eid("cobalt-body").classList.toggle('no-animation'); break;
+        case "reduceTransparency": eid("copylink-body").classList.toggle('no-transparency'); break;
+        case "disableAnimations": eid("copylink-body").classList.toggle('no-animation'); break;
     }
     action === "disableChangelog" && sGet(action) === "true" ? notificationCheck("disable") : notificationCheck();
 }
@@ -557,10 +557,10 @@ function loadSettings() {
         eid("downloadPopup").checked = true;
     }
     if (sGet("reduceTransparency") === "true" || isOldFirefox) {
-        eid("cobalt-body").classList.add('no-transparency');
+        eid("copylink-body").classList.add('no-transparency');
     }
     if (sGet("disableAnimations") === "true") {
-        eid("cobalt-body").classList.add('no-animation');
+        eid("copylink-body").classList.add('no-animation');
     }
     for (let i = 0; i < checkboxes.length; i++) {
         if (sGet(checkboxes[i]) === "true") eid(checkboxes[i]).checked = true;
