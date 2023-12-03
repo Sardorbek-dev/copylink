@@ -252,7 +252,7 @@ button:active,
     left: 50%;
     transform: translate(-50%, -50%);
 }
-#copylink-main-box {
+#cobalt-main-box {
     position: fixed;
     width: 60%;
     height: auto;
@@ -278,12 +278,12 @@ button:active,
     flex-direction: column;
     width: 100%;
 }
-#copylink-main-box #top {
+#cobalt-main-box #top {
     display: inline-flex;
     height: 2.5rem;
     flex-direction: row;
 }
-#copylink-main-box #bottom {
+#cobalt-main-box #bottom {
     padding-top: 1rem;
     display: flex;
     flex-direction: row;
@@ -341,7 +341,7 @@ button:active,
     font-size: 0.9rem;
     text-align: center;
 }
-#copylink-main-box #bottom,
+#cobalt-main-box #bottom,
 #footer-buttons,
 #footer-buttons, .footer-pair {
     gap: var(--gap);
@@ -757,7 +757,7 @@ button:active,
     margin-top: 0!important;
     margin-bottom: var(--padding-1);
 }
-#copylink-main-box #bottom button {
+#cobalt-main-box #bottom button {
     width: auto;
     padding: var(--gap) 1.2rem;
 }
@@ -1012,7 +1012,7 @@ button:active,
     }
 }
 @media screen and (max-width: 1440px) {
-    #copylink-main-box {
+    #cobalt-main-box {
         width: 65%;
     }
     .popup.small {
@@ -1028,7 +1028,7 @@ button:active,
     }
 }
 @media screen and (max-width: 1200px) {
-    #copylink-main-box {
+    #cobalt-main-box {
         width: 70%;
     }
     .popup.small {
@@ -1039,7 +1039,7 @@ button:active,
     }
 }
 @media screen and (max-width: 1025px) {
-    #copylink-main-box {
+    #cobalt-main-box {
         width: 75%;
     }
     .popup.small {
@@ -1067,13 +1067,13 @@ button:active,
     }
 }
 @media screen and (max-width: 720px) {
-    #copylink-main-box {
+    #cobalt-main-box {
         width: calc(100% - (0.7rem * 2));
     }
-    #copylink-main-box #bottom {
+    #cobalt-main-box #bottom {
         flex-direction: column-reverse;
     }
-    #copylink-main-box #bottom button {
+    #cobalt-main-box #bottom button {
         width: 100%;
     }
     #footer {
@@ -1093,7 +1093,7 @@ button:active,
         height: auto;
         justify-content: center;
     }
-    #copylink-main-box {
+    #cobalt-main-box {
         display: flex;
         border: none;
         padding: 0;

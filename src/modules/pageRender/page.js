@@ -75,7 +75,7 @@ export default function(obj) {
 
         <noscript><div style="margin: 2rem;">${t('NoScriptMessage')}</div></noscript>
     </head>
-    <body id="copylink-body" ${platform === "d" ? 'class="desktop"' : ''} data-nosnippet ontouchstart>
+    <body id="cobalt-body" ${platform === "d" ? 'class="desktop"' : ''} data-nosnippet ontouchstart>
         <body id="notification-area"></div>
         ${multiPagePopup({
             name: "about",
@@ -522,7 +522,7 @@ export default function(obj) {
                 visible: true,
                 action: "popup('about', 1, 'changelog')"
             })}
-            <div id="copylink-main-box" class="center">
+            <div id="cobalt-main-box" class="center">
                 <div id="logo">${t("AppTitleCobalt")}${betaTag()}</div>
                 <div id="download-area">
                     <div id="top">
