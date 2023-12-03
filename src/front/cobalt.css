@@ -1186,3 +1186,7 @@ button:active,
         line-height: inherit;
     }
 }
+
+.d-none {
+    display: none;
+}

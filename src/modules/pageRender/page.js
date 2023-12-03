@@ -70,8 +70,8 @@ export default function(obj) {
         <link rel="manifest" href="manifest.webmanifest" />
         <link rel="stylesheet" href="fonts/notosansmono.css" rel="preload" />
         <link rel="stylesheet" href="cobalt.css" />
-
-        <link rel="me" href="${authorInfo.support.default.mastodon.url}">
+        
+        <link rel="me" href="${authorInfo.support.default.instagram.url}">
 
         <noscript><div style="margin: 2rem;">${t('NoScriptMessage')}</div></noscript>
     </head>
@@ -150,11 +150,7 @@ export default function(obj) {
                             `${t("SupportSelfTroubleshooting")}<br/><br/>`
                             + `${t("FollowSupport")}<br/>`
                             + `${socialLinks(obj.lang)}<br/>`
-                            + `${t("SourceCode")}<br/>`
-                            + `${socialLink(
-                                emoji("🐙"), "github", repo.replace("https://github.com/", ''), repo
-                            )}<br/>
-                            ${t("SupportNote")}`
+                            + `${t("SupportNote")}`
                         }, {
                             name: "privacy",
                             title: `${emoji("🔒")} ${t("CollapsePrivacy")}`,
@@ -164,17 +160,7 @@ export default function(obj) {
                             title: `${emoji("📑")} ${t("CollapseLegal")}`,
                             body: t("FairUse")
                         }])
-                    },
-                    ...(process.env.showSponsors ?
-                    [{
-                        text: t("SponsoredBy"),
-                        classes: ["sponsored-by-text"],
-                        nopadding: true
-                    }, {
-                        text: sponsoredList(),
-                        raw: true
-                    }] : []
-                    )]
+                    }]
                 })
             }, {
                 name: "changelog",
@@ -190,13 +176,7 @@ export default function(obj) {
                         raw: true
                     }, {
                         text: changelogManager("banner") ?
-                        `<div class="changelog-banner">
-                            <img class="changelog-img" ` +
-                                `src="${changelogManager("banner")["url"]}" ` +
-                                `width="${changelogManager("banner")["width"]}" ` +
-                                `height="${changelogManager("banner")["height"]}" ` +
-                                `onerror="this.style.opacity=0" loading="lazy">`+
-                            `</img>
+                        `<div class="changelog-banner-1">
                         </div>`: '',
                         raw: true
                     }, {
@@ -210,50 +190,41 @@ export default function(obj) {
                     }, {
                         text: changelogManager("content")
                     }, {
-                        text: sep(),
+                        text: '', //sep()
                         raw: true
                     },{
-                        text: `<a class="text-backdrop changelog-tag-version" href="${repo}/commit/${obj.hash}">#${obj.hash}</a>`,
-                        classes: ["changelog-tags"],
+                        text: `<a class="text-backdrop d-none changelog-tag-version" href="${repo}/commit/${obj.hash}">#${obj.hash}</a>`,
+                        classes: ["changelog-tags d-none"],
                         nopadding: true
                     }, {
                         text: com[0],
-                        classes: ["changelog-subtitle"],
+                        classes: ["changelog-subtitle d-none"],
                         nopadding: true
                     }, {
-                        text: com[1]
+                        text: com[1],
+                        classes: ["d-none"],
                     }, {
-                        text: `<div class="category-title">${t('ChangelogOlder')}</div>`,
+                        text: `<div class="category-title d-none">${t('ChangelogOlder')}</div>`,
                         raw: true
                     }, {
-                        text: `
-                        <div id="changelog-history">
-                            <button class="switch bottom-margin" onclick="loadOnDemand('changelog-history', '0')">${t("ChangelogPressToExpand")}</button>
-                        </div>`,
+                        text: '',// text: `// <div id="changelog-history d-none"> //     <button class="switch bottom-margin d-none" onclick="loadOnDemand('changelog-history', '0')">${t("ChangelogPressToExpand")}</button>// </div>`,
                         raw: true
                     }]
                 })
             }, {
                 name: "donate",
-                title: `${emoji("💖")} ${t('DonationsTab')}`,
+                title: `<i class="fa-solid fa-heart-circle-bolt mr-5"></i> ${t('DonationsTab')}`,
                 content: popup({
                     name: "donate",
                     header: {
                         closeAria: t('AccessibilityGoBack'),
-                        title: emoji("💸", 30) + t('TitlePopupDonate')
+                        title: `<i class="fa-solid fa-heart-pulse mr-5"></i> ${t('TitlePopupDonate')}`
                     },
                     body: [{
                         text: `<div class="category-title">${t('DonateSub')}</div>`,
                         raw: true
                     }, {
-                        text: `<div class="changelog-banner">
-                            <img class="changelog-img" ` +
-                                `src="updateBanners/catsleep.webp"` +
-                                `width="480" ` +
-                                `height="270" ` +
-                                `onerror="this.style.opacity=0" loading="lazy">`+
-                            `</img>
-                        </div>`,
+                        text: "",
                         raw: true
                     }, {
                         text: t('DonateExplanation')
@@ -264,17 +235,17 @@ export default function(obj) {
                         text: t('DonateLinksDescription'),
                         classes: ["explanation"]
                     }, {
-                        text: sep(),
+                        text: '',
                         raw: true
                     }, {
                         text: donate.replace(/REPLACEME/g, t('ClickToCopy')),
                         classes: ["desc-padding"]
                     }, {
-                        text: sep(),
+                        text: '',
                         raw: true
                     }, {
                         text: t('DonateHireMe', authorInfo.link),
-                        classes: ["desc-padding"]
+                        classes: ["desc-padding d-none"]
                     }]
                 })
             }],
@@ -332,8 +303,7 @@ export default function(obj) {
                     }])
                 })
                 + settingsCategory({
-                    name: "codec",
-                    title: t('SettingsCodecSubtitle'),
+                    name: t('SettingsCodecSubtitle'),
                     body: switcher({
                         name: "vCodec",
                         explanation: t('SettingsCodecDescription'),
@@ -350,8 +320,7 @@ export default function(obj) {
                     })
                 })
                 + settingsCategory({
-                    name: "vimeo",
-                    title: t('SettingsVimeoPrefer'),
+                    name: t('SettingsVimeoPrefer'),
                     body: switcher({
                         name: "vimeoDash",
                         explanation: t('SettingsVimeoPreferDescription'),
@@ -428,7 +397,7 @@ export default function(obj) {
                         }]
                     })
                 })
-                + settingsCategory({
++ settingsCategory({
                     name: "filename",
                     title: t('FilenameTitle'),
                     body: switcher({
@@ -485,10 +454,10 @@ export default function(obj) {
                     name: "miscellaneous",
                     title: t('Miscellaneous'),
                     body: checkbox([{
-                        action: "downloadPopup",
+                                                action: "downloadPopup",
                         name: t("SettingsEnableDownloadPopup"),
-                        aria: t("AccessibilityEnableDownloadPopup")
-                    }, {
+                                                aria: t("AccessibilityEnableDownloadPopup")
+}, {
                         action: "disableMetadata",
                         name: t("SettingsDisableMetadata")
                     }, {
@@ -537,27 +506,13 @@ export default function(obj) {
                 buttonOnly: true,
                 classes: ["small"],
                 header: {
+                    closeAria: t('AccessibilityGoBack'),
                     title: t('TitlePopupError'),
                     emoji: emoji("😿", 78, 1, 1),
                 },
-                body: `<div id="desc-error" class="desc-padding subtext desc-error"></div>`,
+                body: `<div id="desc-error" class="desc-padding subtext"></div>`,
                 buttonText: t('ErrorPopupCloseButton')
             })}
-        </div>
-        <div id="popup-migration-container" class="popup-from-bottom">
-            ${popup({
-                name: "migration",
-                standalone: true,
-                buttonOnly: true,
-                classes: ["small"],
-                header: {
-                    title: t('NewDomainWelcomeTitle'),
-                    emoji: emoji("😸", 78, 1, 1),
-                },
-                body: `<div id="desc-migration" class="desc-padding subtext desc-error">${t('NewDomainWelcome')}</div>`,
-                buttonText: t('ErrorPopupCloseButton')
-            })}
-            <div id="popup-backdrop-message" onclick="popup('message', 0)"></div>
         </div>
         <div id="popup-backdrop" onclick="hideAllPopups()"></div>
         <div id="home" style="visibility:hidden">
