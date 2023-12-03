@@ -1,0 +1,15 @@
+<div class="css-1vs2kf0" data-testid="editor-canvas-artboard">
+  <div style="transform: scale(1);">
+    <svg width="429" height="89.99691873154451" viewBox="0 0 409.94736842105254 86" class="css-1j8o68f">
+      <defs id="SvgjsDefs7426"></defs>
+      <g id="SvgjsG7427" featurekey="symbolContainer" transform="matrix(1,0,0,1,0,0)" fill="#000000">
+        <rect xmlns="http://www.w3.org/2000/svg" width="86" height="86" rx="10" ry="10">
+        </rect>
+      </g>
+      <g id="SvgjsG7428" featurekey="symbolFeature-0" transform="matrix(0.575657894736842,0,0,0.575657894736842,14.243421052631579,14.819078947368421)" fill="#ffffff">
+        <path xmlns="http://www.w3.org/2000/svg" d="M90,9L20,52.3h26.7L10,89l76.7-50H60L90,9z" style="fill-rule: evenodd; clip-rule: evenodd;">
+        </path>
+      </g>
+    </svg>
+  </div>
+</div>
