@@ -9,16 +9,5 @@
             "height": 360
         },
         "content": "Our team has been working hard on copylink to enhance your experience and bring you new features that will elevate your content discovery journey! These are just a few highlights of what's on the horizon. We're constantly working to improve copylink and bring you features that enhance your experience!"
-    },
-    "history": [{
-        "version": "7.5",
-        "date": "September 16, 2023",
-        "title": "support for twitch clips and rutube!",
-        "banner": {
-            "file": "twitchupdate.webp",
-            "width": 851,
-            "height": 640
-        },
-        "content": "hey! this update (finally) adds support for twitch clips and rutube, among other smaller changes.\n\nservice improvements:\n*; added support for twitch clips. no vods, they're unnecessary. just clip whatever you want to download!\n*; added support for rutube in case you ever wanted to download something russian.\n\ninterface improvements:\n*; added a note about cobalt not being affiliated with any supported services.\n*; added a note about meta (the company) in russian.\n*; better russian localization. will keep improving it to make it sound not so robotic over time.\n\nother improvements:\n*; all official servers are now using the docker package. and so should you!\n*; moved the load balancer to poland. requests should be slightly faster now.\n*; minor codebase clean up.\n\nif you're confused about the new domain, read the older changelog! just scroll lower and press \"expand\".\n\ni hope you find this update useful and have a wonderful day :)\n\nbtw, cobalt has a pretty active community server on discord. go to about > support & source code to join!"
-    }]
+    }
 }
