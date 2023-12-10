@@ -75,6 +75,14 @@ export default function(obj) {
 
         <noscript><div style="margin: 2rem;">${t('NoScriptMessage')}</div></noscript>
     </head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0240DD3TNW"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-0240DD3TNW');
+    </script>
     <body id="cobalt-body" ${platform === "d" ? 'class="desktop"' : ''} data-nosnippet ontouchstart>
         <body id="notification-area"></div>
         ${multiPagePopup({
